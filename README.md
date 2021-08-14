@@ -12,7 +12,7 @@
 - `mongo`: mongo地址，eg: `mongodb://root:example@mongo:27017`
 - `ws_url`: 支持onebot协议的正向websocket地址，eg: `ws://cq-http:6700?access_token=password`
 
-#### bash
+#### powershell
 
 ```powershell
 $Env:es="http://elastic:password@es:9200/chatlog/"
@@ -20,12 +20,32 @@ $Env:mongo="mongodb://root:example@mongo:27017"
 $Env:ws_url="ws://cq-http:6700?access_token=coolrc"
 ```
 
-#### powershell
+#### bash
 
 ```bash
 export es="http://elastic:passwordrc136@es:9200/chatlog/"
 export mongo="mongodb://root:example@mongo:27017"
 export ws_url="ws://182.254.226.153:6700?access_token=coolrc"
+```
+
+### docker-compose
+
+```yml
+version: '3'
+services:
+  bot:
+    image: denoland/deno:alpine
+    restart: on-failure:3
+    volumes:
+      - ./app/:/app/
+    command: deno run --unstable --allow-all /app/index.js
+    labels:
+      - "autoheal=true"
+    environment:
+      - "es=http://elastic:passwordrc136@es:9200/chatlog/"
+      - "mongo=mongodb://root:example@mongo:27017"
+      - "ws_url=ws://cq-http:6700?access_token=coolrc"
+  ...
 ```
 
 ### 运行
