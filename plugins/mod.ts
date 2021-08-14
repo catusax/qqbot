@@ -6,6 +6,7 @@ import qqmusic from './qqmusic.ts'
 import { cat, dog } from './cat_dog.ts'
 import search_360pic from './360pic.ts'
 import searcKeyword from './es_search.ts'
+import carbon_code_pic from './carbon_code_pic.ts'
 
 
 async function help(msg: CqMessageEvent, command: string): Promise<QuickReply> {
@@ -67,6 +68,11 @@ export const plugins: Plugin[] = [
         regex: /^搜索 \S+/,
         handler: searcKeyword,
         descripion: "搜索：在群消息记录里搜索一条信息"
+    },
+    {
+        regex: /```.*\r*\n[\w\W]*\r*\n```/im,
+        handler: carbon_code_pic,
+        descripion: "``` <code> ``` :Markdown格式的代码，将会被渲染为图片"
     },
     {
         regex: /(汉奸|日本人|外国人)/,
