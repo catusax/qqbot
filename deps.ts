@@ -6,3 +6,4 @@ export * as base64 from 'https://deno.land/std@0.104.0/encoding/base64.ts'
 export const es_uri = Deno.env.get("es")!
 export const mongo = Deno.env.get("mongo")!
 export const ws_url = Deno.env.get("ws_url")!
+export const rayso_api = Deno.env.get("rayso_api")!

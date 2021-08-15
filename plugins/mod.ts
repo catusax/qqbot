@@ -7,6 +7,7 @@ import { cat, dog } from './cat_dog.ts'
 import search_360pic from './360pic.ts'
 import searcKeyword from './es_search.ts'
 import carbon_code_pic from './carbon_code_pic.ts'
+import rayso_code from './rayso_code.ts'
 
 
 async function help(msg: CqMessageEvent, command: string): Promise<QuickReply> {
@@ -71,7 +72,7 @@ export const plugins: Plugin[] = [
     },
     {
         regex: /```.*\r*\n[\w\W]*\r*\n```/im,
-        handler: carbon_code_pic,
+        handler: rayso_code,
         descripion: "``` <code> ``` :Markdown格式的代码，将会被渲染为图片"
     },
     {
