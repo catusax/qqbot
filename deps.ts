@@ -1,4 +1,4 @@
-export * from 'https://cdn.deno.land/cqhttp_bot/versions/v0.1.5/raw/deno_dist/mod.ts'
+export * from 'https://cdn.deno.land/cqhttp_bot/versions/v0.1.6/raw/deno_dist/mod.ts'
 export * from "https://deno.land/x/mongo@v0.24.0/mod.ts"
 export * as base64 from 'https://deno.land/std@0.104.0/encoding/base64.ts'
 
