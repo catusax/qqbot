@@ -41,11 +41,6 @@ export const plugins: Plugin[] = [
         descripion: "help: 帮助文档"
     },
     {
-        regex: /^点歌 \S+/,
-        handler: qqmusic,
-        descripion: "点歌 <关键词>: 点一首歌"
-    },
-    {
         regex: /^猫猫图/,
         handler: cat,
         descripion: "猫猫图: 一张随机猫猫图"
