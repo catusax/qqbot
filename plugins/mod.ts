@@ -67,7 +67,7 @@ export const plugins: Plugin[] = [
         descripion: "搜索：在群消息记录里搜索一条信息"
     },
     {
-        regex: /^政审 .*/,
+        regex: /^政审 \S+/,
         handler: zhengshen,
         descripion: "调查发言次数"
     },

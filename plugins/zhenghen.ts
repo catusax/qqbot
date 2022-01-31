@@ -1,18 +1,19 @@
 import { CqCode, CqMessageEvent, es_uri, QuickReply } from "../deps.ts";
+import { find_first } from "./utils.ts";
 
 export default async function zhengshen(
     msg: CqMessageEvent,
     command: string
 ): Promise<QuickReply> {
-    // let keyword = find_first(msg.message, /(?<=搜索 ).*/gm);
+    let user = find_first(msg.message, /(?<=政审 ).*/gm);
 
-    let cqcode = new CqCode(msg.message);
+    // let cqcode = new CqCode(msg.message);
 
-    let user = cqcode.at;
+    // let user = cqcode.at;
 
-    if (user == 0) {
-        msg.quick_reply("bad request");
-    }
+    // if (user == 0) {
+    //     msg.quick_reply("bad request");
+    // }
 
     try {
         let res = await searchUser(user);
@@ -23,7 +24,7 @@ export default async function zhengshen(
     }
 }
 
-export async function searchUser(user: number): Promise<number> {
+export async function searchUser(user: string): Promise<number> {
     let resp = await fetch(es_uri + "_count", {
         method: "POST",
         headers: {
