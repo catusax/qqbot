@@ -1,6 +1,7 @@
 import { CqMessageEvent, QuickReply } from '../deps.ts'
 
 import mao from './mao.ts'
+import zhengshen from './zhenghen.ts'
 import gushi from './gushi.ts'
 import qqmusic from './qqmusic.ts'
 import { cat, dog } from './cat_dog.ts'
@@ -64,6 +65,11 @@ export const plugins: Plugin[] = [
         regex: /^搜索 \S+/,
         handler: searcKeyword,
         descripion: "搜索：在群消息记录里搜索一条信息"
+    },
+    {
+        regex: /^政审 .*/,
+        handler: zhengshen,
+        descripion: "调查发言次数"
     },
     {
         regex: /```.*\r*\n[\w\W]*\r*\n```/im,
