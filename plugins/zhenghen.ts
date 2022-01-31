@@ -31,20 +31,12 @@ export async function searchUser(user: string): Promise<number> {
             "Content-Type": "application/json",
         },
         body: `{
-        "query": {
-            "bool": {
-            "must": [
-                {
-                "match": {
-                    "message": {
-                    "sender_id": ${user}
-                    }
-                }
-                }
-            ]
+            "query": {
+              "match": {
+                "sender_id": ${user}
+              }
             }
-        }
-    }`,
+          }`,
     });
     if (resp.status != 200) {
         throw "查询错误";
