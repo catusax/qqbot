@@ -1,0 +1,5 @@
+.env.prod
+.vscode
+index.js
+
+__pycache__
