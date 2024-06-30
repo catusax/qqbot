@@ -13,7 +13,6 @@ nonebot.load_plugin("nonebot_plugin_status")
 nonebot.load_plugin("nonebot_plugin_plus_one")
 nonebot.load_plugin("nonebot_plugin_memes")
 # nonebot.load_plugin("nonebot_plugin_apscheduler")
-nonebot.load_plugin("nonebot_plugin_mcqq")
 
 nonebot.load_plugins("src/plugins")  # 本地插件
 
