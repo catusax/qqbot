@@ -16,7 +16,7 @@ async def chat_with_tools(client: AsyncOpenAI, model: str, messages: Iterable[Ch
         model=model,
         messages=messages,
         tools=[tool.to_openai_tool()
-               for tool in tools] if add_tools and len(tool) > 0 else NotGiven(),
+               for tool in tools] if add_tools and len(tools) > 0 else NotGiven(),
     )
 
     # print(f"chat_with_tools_response: {response.choices[0]}")
