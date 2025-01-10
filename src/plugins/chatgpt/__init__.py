@@ -21,7 +21,7 @@ from .openai_chat import chat_with_tools
 from .tools import Weather
 
 builtin_tools = [
-    Weather()
+    # Weather()
 ]
 
 __plugin_meta__ = PluginMetadata(
