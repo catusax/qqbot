@@ -1,4 +1,9 @@
-version: '3'
+version: "3"
 
 tasks:
   docker: docker build -t coolrc/qqbot .
+  run:
+    dotenv:
+      - .env
+    cmds:
+      - poetry run python main.py

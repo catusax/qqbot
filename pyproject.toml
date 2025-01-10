@@ -9,11 +9,14 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 nonebot-adapter-onebot = "^2.4.3"
-nonebot2 = {extras = ["fastapi", "httpx", "websockets"], version = "^2.3.1"}
+nonebot2 = {extras = ["fastapi", "httpx", "websockets"], version = "^2.4.1"}
 nonebot-plugin-status = "^0.8.1"
 nonebot-plugin-plus-one = "^0.1.10"
 numpy = "^1.23.5"
 nonebot-plugin-memes = "^0.6.2"
+httpx = {extras = ["socks"], version = "^0.28.1"}
+openai = "^1.59.3"
+nonebot-plugin-alconna = "^0.54.2"
 
 
 [[tool.poetry.source]]

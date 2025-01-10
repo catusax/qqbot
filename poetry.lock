@@ -11,61 +11,81 @@ files = [
     {file = "annotated_types-0.7.0.tar.gz", hash = "sha256:aff07c09a53a08bc8cfccb9c85b05f1aa9a2a6f23728d790723543408344ce89"},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "anyio"
-version = "4.4.0"
+version = "4.8.0"
 description = "High level compatibility layer for multiple asynchronous event loop implementations"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "anyio-4.4.0-py3-none-any.whl", hash = "sha256:c1b2d8f46a8a812513012e1107cb0e68c17159a7a594208005a57dc776e1bdc7"},
-    {file = "anyio-4.4.0.tar.gz", hash = "sha256:5aadc6a1bbb7cdb0bede386cac5e2940f5e2ff3aa20277e991cf028e0585ce94"},
+    {file = "anyio-4.8.0-py3-none-any.whl", hash = "sha256:b5011f270ab5eb0abf13385f851315585cc37ef330dd88e27ec3d34d651fd47a"},
+    {file = "anyio-4.8.0.tar.gz", hash = "sha256:1d9fe889df5212298c0c0723fa20479d1b94883a2df44bd3897aa91083316f7a"},
 ]
 
 [package.dependencies]
 exceptiongroup = {version = ">=1.0.2", markers = "python_version < \"3.11\""}
 idna = ">=2.8"
 sniffio = ">=1.1"
-typing-extensions = {version = ">=4.1", markers = "python_version < \"3.11\""}
+typing_extensions = {version = ">=4.5", markers = "python_version < \"3.13\""}
 
 [package.extras]
-doc = ["Sphinx (>=7)", "packaging", "sphinx-autodoc-typehints (>=1.2.0)", "sphinx-rtd-theme"]
-test = ["anyio[trio]", "coverage[toml] (>=7)", "exceptiongroup (>=1.2.0)", "hypothesis (>=4.0)", "psutil (>=5.9)", "pytest (>=7.0)", "pytest-mock (>=3.6.1)", "trustme", "uvloop (>=0.17)"]
-trio = ["trio (>=0.23)"]
+doc = ["Sphinx (>=7.4,<8.0)", "packaging", "sphinx-autodoc-typehints (>=1.2.0)", "sphinx_rtd_theme"]
+test = ["anyio[trio]", "coverage[toml] (>=7)", "exceptiongroup (>=1.2.0)", "hypothesis (>=4.0)", "psutil (>=5.9)", "pytest (>=7.0)", "trustme", "truststore (>=0.9.1)", "uvloop (>=0.21)"]
+trio = ["trio (>=0.26.1)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "arclet-alconna"
-version = "1.8.16"
+version = "1.8.35"
 description = "A High-performance, Generality, Humane Command Line Arguments Parser Library."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "arclet_alconna-1.8.16-py3-none-any.whl", hash = "sha256:b04241904d3f3a9d3eae30c5d1af7e264528b5a87b729fee5f408b2d93cef035"},
-    {file = "arclet_alconna-1.8.16.tar.gz", hash = "sha256:57bdc42c8626846ad536c19a24804790005554db4ad3300b7d4607c684cd25f3"},
+    {file = "arclet_alconna-1.8.35-py3-none-any.whl", hash = "sha256:95d8aaf079167b24e158a0c5125dc17c671da129969dcc5f8b79a9cc72b6389c"},
+    {file = "arclet_alconna-1.8.35.tar.gz", hash = "sha256:0cdb7fbdd154110ed7fb79e2b281df6c5fc87861770301f1c0cf8af594ee95f3"},
 ]
 
 [package.dependencies]
-nepattern = ">=0.7.3,<1.0.0"
-tarina = ">=0.5.0"
+nepattern = ">=0.7.7,<1.0.0"
+tarina = ">=0.6.1,<0.7.0"
 typing-extensions = ">=4.5.0"
 
 [package.extras]
 full = ["arclet-alconna-tools (>=0.2.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "arclet-alconna-tools"
-version = "0.7.6"
+version = "0.7.10"
 description = "Builtin Tools for Alconna"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "arclet_alconna_tools-0.7.6-py3-none-any.whl", hash = "sha256:fdd1cb900603ce6bb00295bf7bf7f60dfdb764f0614abe248cdcb754e5149edd"},
-    {file = "arclet_alconna_tools-0.7.6.tar.gz", hash = "sha256:7cb7dc54c1c2198529c63227739423401051b8489374f1a7a3efa0c4e70b2a22"},
+    {file = "arclet_alconna_tools-0.7.10-py3-none-any.whl", hash = "sha256:50e8b2f433fbc612dc8b99f4f5410006dcb1ef406c971c795071117a4eab8e20"},
+    {file = "arclet_alconna_tools-0.7.10.tar.gz", hash = "sha256:446a63a9c56886c23fb44548bb9a18655e0ba5b5dd80cc87915b858dfb02554c"},
 ]
 
 [package.dependencies]
-arclet-alconna = ">=1.8.15"
+arclet-alconna = ">=1.8.31"
 nepattern = ">=0.7.3,<1.0.0"
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "bbcode"
@@ -78,6 +98,11 @@ files = [
     {file = "bbcode-1.1.0.tar.gz", hash = "sha256:eac4fb1d0f6c7ce5c41e4b5c0522562b15a1ac036fb9131adc59e9a28c7dc1d0"},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "cachetools"
 version = "5.3.3"
@@ -89,6 +114,11 @@ files = [
     {file = "cachetools-5.3.3.tar.gz", hash = "sha256:ba29e2dfa0b8b556606f097407ed1aa62080ee108ab0dc5ec9d6a723a007d105"},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "certifi"
 version = "2024.6.2"
@@ -99,6 +129,11 @@ files = [
     {file = "certifi-2024.6.2-py3-none-any.whl", hash = "sha256:ddc6c8ce995e6987e7faf5e3f1b02b302836a0e5d98ece18392cb1a36c72ad56"},
     {file = "certifi-2024.6.2.tar.gz", hash = "sha256:3cd43f1c6fa7dedc5899d69d3ad0398fd018ad1a17fba83ddaf78aa46c747516"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "click"
@@ -114,6 +149,11 @@ files = [
 [package.dependencies]
 colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "colorama"
 version = "0.4.6"
@@ -124,6 +164,11 @@ files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "contourpy"
@@ -188,6 +233,11 @@ mypy = ["contourpy[bokeh,docs]", "docutils-stubs", "mypy (==1.8.0)", "types-Pill
 test = ["Pillow", "contourpy[test-no-images]", "matplotlib"]
 test-no-images = ["pytest", "pytest-cov", "pytest-xdist", "wurlitzer"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "cycler"
 version = "0.12.1"
@@ -202,6 +252,11 @@ files = [
 [package.extras]
 docs = ["ipython", "matplotlib", "numpydoc", "sphinx"]
 tests = ["pytest", "pytest-cov", "pytest-xdist"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "dateparser"
@@ -225,6 +280,27 @@ calendars = ["convertdate", "hijri-converter"]
 fasttext = ["fasttext"]
 langdetect = ["langdetect"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
+[[package]]
+name = "distro"
+version = "1.9.0"
+description = "Distro - an OS platform information API"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "distro-1.9.0-py3-none-any.whl", hash = "sha256:7bffd925d65168f85027d8da9af6bddab658135b840670a223589bc0c8ef02b2"},
+    {file = "distro-1.9.0.tar.gz", hash = "sha256:2fa77c6fd8940f116ee1d6b94a2f90b13b5ea8d019b98bc8bafdcabcdd9bdbed"},
+]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "emoji"
 version = "2.12.1"
@@ -242,19 +318,29 @@ typing-extensions = ">=4.7.0"
 [package.extras]
 dev = ["coverage", "pytest (>=7.4.4)"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "exceptiongroup"
-version = "1.2.1"
+version = "1.2.2"
 description = "Backport of PEP 654 (exception groups)"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "exceptiongroup-1.2.1-py3-none-any.whl", hash = "sha256:5258b9ed329c5bbdd31a309f53cbfb0b155341807f6ff7606a1e801a891b29ad"},
-    {file = "exceptiongroup-1.2.1.tar.gz", hash = "sha256:a4785e48b045528f5bfe627b6ad554ff32def154f42372786903b7abcfe1aa16"},
+    {file = "exceptiongroup-1.2.2-py3-none-any.whl", hash = "sha256:3111b9d131c238bec2f8f516e123e14ba243563fb135d3fe885990585aa7795b"},
+    {file = "exceptiongroup-1.2.2.tar.gz", hash = "sha256:47c2edf7c6738fafb49fd34290706d1a1a2f4d1c6df275526b62cbb4aa5393cc"},
 ]
 
 [package.extras]
 test = ["pytest (>=6)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "fastapi"
@@ -275,6 +361,11 @@ typing-extensions = ">=4.8.0"
 [package.extras]
 all = ["email_validator (>=2.0.0)", "httpx (>=0.23.0)", "itsdangerous (>=1.1.0)", "jinja2 (>=2.11.2)", "orjson (>=3.2.1)", "pydantic-extra-types (>=2.0.0)", "pydantic-settings (>=2.0.0)", "python-multipart (>=0.0.7)", "pyyaml (>=5.3.1)", "ujson (>=4.0.1,!=4.0.2,!=4.1.0,!=4.2.0,!=4.3.0,!=5.0.0,!=5.1.0)", "uvicorn[standard] (>=0.12.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "filetype"
 version = "1.2.0"
@@ -285,6 +376,11 @@ files = [
     {file = "filetype-1.2.0-py2.py3-none-any.whl", hash = "sha256:7ce71b6880181241cf7ac8697a2f1eb6a8bd9b429f7ad6d27b8db9ba5f1c2d25"},
     {file = "filetype-1.2.0.tar.gz", hash = "sha256:66b56cd6474bf41d8c54660347d37afcc3f7d1970648de365c102ef77548aadb"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "fonttools"
@@ -351,6 +447,11 @@ ufo = ["fs (>=2.2.0,<3)"]
 unicode = ["unicodedata2 (>=15.1.0)"]
 woff = ["brotli (>=1.0.1)", "brotlicffi (>=0.8.0)", "zopfli (>=0.1.4)"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "h11"
 version = "0.14.0"
@@ -361,6 +462,11 @@ files = [
     {file = "h11-0.14.0-py3-none-any.whl", hash = "sha256:e3fe4ac4b851c468cc8363d500db52c2ead036020723024a109d37346efaa761"},
     {file = "h11-0.14.0.tar.gz", hash = "sha256:8f19fbbe99e72420ff35c00b27a34cb9937e902a8b810e2c88300c6f0a3b699d"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "h2"
@@ -377,6 +483,11 @@ files = [
 hpack = ">=4.0,<5"
 hyperframe = ">=6.0,<7"
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "hpack"
 version = "4.0.0"
@@ -388,15 +499,20 @@ files = [
     {file = "hpack-4.0.0.tar.gz", hash = "sha256:fc41de0c63e687ebffde81187a948221294896f6bdc0ae2312708df339430095"},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "httpcore"
-version = "1.0.5"
+version = "1.0.7"
 description = "A minimal low-level HTTP client."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "httpcore-1.0.5-py3-none-any.whl", hash = "sha256:421f18bac248b25d310f3cacd198d55b8e6125c107797b609ff9b7a6ba7991b5"},
-    {file = "httpcore-1.0.5.tar.gz", hash = "sha256:34a38e2f9291467ee3b44e89dd52615370e152954ba21721378a87b2960f7a61"},
+    {file = "httpcore-1.0.7-py3-none-any.whl", hash = "sha256:a3fff8f43dc260d5bd363d9f9cf1830fa3a458b332856f34282de498ed420edd"},
+    {file = "httpcore-1.0.7.tar.gz", hash = "sha256:8551cb62a169ec7162ac7be8d4817d561f60e08eaa485234898414bb5a8a0b4c"},
 ]
 
 [package.dependencies]
@@ -407,7 +523,12 @@ h11 = ">=0.13,<0.15"
 asyncio = ["anyio (>=4.0,<5.0)"]
 http2 = ["h2 (>=3,<5)"]
 socks = ["socksio (==1.*)"]
-trio = ["trio (>=0.22.0,<0.26.0)"]
+trio = ["trio (>=0.22.0,<1.0)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "httptools"
@@ -457,15 +578,20 @@ files = [
 [package.extras]
 test = ["Cython (>=0.29.24,<0.30.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "httpx"
-version = "0.27.0"
+version = "0.28.1"
 description = "The next generation HTTP client."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "httpx-0.27.0-py3-none-any.whl", hash = "sha256:71d5465162c13681bff01ad59b2cc68dd838ea1f10e51574bac27103f00c91a5"},
-    {file = "httpx-0.27.0.tar.gz", hash = "sha256:a0cb88a46f32dc874e04ee956e4c2764aba2aa228f650b06788ba6bda2962ab5"},
+    {file = "httpx-0.28.1-py3-none-any.whl", hash = "sha256:d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad"},
+    {file = "httpx-0.28.1.tar.gz", hash = "sha256:75e98c5f16b0f35b567856f597f06ff2270a374470a5c2392242528e3e3e42fc"},
 ]
 
 [package.dependencies]
@@ -474,13 +600,19 @@ certifi = "*"
 h2 = {version = ">=3,<5", optional = true, markers = "extra == \"http2\""}
 httpcore = "==1.*"
 idna = "*"
-sniffio = "*"
+socksio = {version = "==1.*", optional = true, markers = "extra == \"socks\""}
 
 [package.extras]
 brotli = ["brotli", "brotlicffi"]
 cli = ["click (==8.*)", "pygments (==2.*)", "rich (>=10,<14)"]
 http2 = ["h2 (>=3,<5)"]
 socks = ["socksio (==1.*)"]
+zstd = ["zstandard (>=0.18.0)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "humanize"
@@ -496,6 +628,11 @@ files = [
 [package.extras]
 tests = ["freezegun", "pytest", "pytest-cov"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "hyperframe"
 version = "6.0.1"
@@ -507,6 +644,11 @@ files = [
     {file = "hyperframe-6.0.1.tar.gz", hash = "sha256:ae510046231dc8e9ecb1a6586f63d2347bf4c8905914aa84ba585ae85f28a914"},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "idna"
 version = "3.7"
@@ -517,6 +659,11 @@ files = [
     {file = "idna-3.7-py3-none-any.whl", hash = "sha256:82fee1fc78add43492d3a1898bfa6d8a904cc97d8427f683ed8e798d07761aa0"},
     {file = "idna-3.7.tar.gz", hash = "sha256:028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "importlib-metadata"
@@ -537,6 +684,11 @@ doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linke
 perf = ["ipython"]
 test = ["flufl.flake8", "importlib-resources (>=1.3)", "jaraco.test (>=5.4)", "packaging", "pyfakefs", "pytest (>=6,!=8.1.*)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-mypy", "pytest-perf (>=0.9.2)", "pytest-ruff (>=0.2.1)"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "jinja2"
 version = "3.1.4"
@@ -553,6 +705,101 @@ MarkupSafe = ">=2.0"
 
 [package.extras]
 i18n = ["Babel (>=2.7)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
+[[package]]
+name = "jiter"
+version = "0.8.2"
+description = "Fast iterable JSON parser."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "jiter-0.8.2-cp310-cp310-macosx_10_12_x86_64.whl", hash = "sha256:ca8577f6a413abe29b079bc30f907894d7eb07a865c4df69475e868d73e71c7b"},
+    {file = "jiter-0.8.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:b25bd626bde7fb51534190c7e3cb97cee89ee76b76d7585580e22f34f5e3f393"},
+    {file = "jiter-0.8.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d5c826a221851a8dc028eb6d7d6429ba03184fa3c7e83ae01cd6d3bd1d4bd17d"},
+    {file = "jiter-0.8.2-cp310-cp310-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:d35c864c2dff13dfd79fb070fc4fc6235d7b9b359efe340e1261deb21b9fcb66"},
+    {file = "jiter-0.8.2-cp310-cp310-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:f557c55bc2b7676e74d39d19bcb8775ca295c7a028246175d6a8b431e70835e5"},
+    {file = "jiter-0.8.2-cp310-cp310-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:580ccf358539153db147e40751a0b41688a5ceb275e6f3e93d91c9467f42b2e3"},
+    {file = "jiter-0.8.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:af102d3372e917cffce49b521e4c32c497515119dc7bd8a75665e90a718bbf08"},
+    {file = "jiter-0.8.2-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:cadcc978f82397d515bb2683fc0d50103acff2a180552654bb92d6045dec2c49"},
+    {file = "jiter-0.8.2-cp310-cp310-musllinux_1_1_aarch64.whl", hash = "sha256:ba5bdf56969cad2019d4e8ffd3f879b5fdc792624129741d3d83fc832fef8c7d"},
+    {file = "jiter-0.8.2-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:3b94a33a241bee9e34b8481cdcaa3d5c2116f575e0226e421bed3f7a6ea71cff"},
+    {file = "jiter-0.8.2-cp310-cp310-win32.whl", hash = "sha256:6e5337bf454abddd91bd048ce0dca5134056fc99ca0205258766db35d0a2ea43"},
+    {file = "jiter-0.8.2-cp310-cp310-win_amd64.whl", hash = "sha256:4a9220497ca0cb1fe94e3f334f65b9b5102a0b8147646118f020d8ce1de70105"},
+    {file = "jiter-0.8.2-cp311-cp311-macosx_10_12_x86_64.whl", hash = "sha256:2dd61c5afc88a4fda7d8b2cf03ae5947c6ac7516d32b7a15bf4b49569a5c076b"},
+    {file = "jiter-0.8.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:a6c710d657c8d1d2adbbb5c0b0c6bfcec28fd35bd6b5f016395f9ac43e878a15"},
+    {file = "jiter-0.8.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a9584de0cd306072635fe4b89742bf26feae858a0683b399ad0c2509011b9dc0"},
+    {file = "jiter-0.8.2-cp311-cp311-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:5a90a923338531b7970abb063cfc087eebae6ef8ec8139762007188f6bc69a9f"},
+    {file = "jiter-0.8.2-cp311-cp311-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:d21974d246ed0181558087cd9f76e84e8321091ebfb3a93d4c341479a736f099"},
+    {file = "jiter-0.8.2-cp311-cp311-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:32475a42b2ea7b344069dc1e81445cfc00b9d0e3ca837f0523072432332e9f74"},
+    {file = "jiter-0.8.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8b9931fd36ee513c26b5bf08c940b0ac875de175341cbdd4fa3be109f0492586"},
+    {file = "jiter-0.8.2-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:ce0820f4a3a59ddced7fce696d86a096d5cc48d32a4183483a17671a61edfddc"},
+    {file = "jiter-0.8.2-cp311-cp311-musllinux_1_1_aarch64.whl", hash = "sha256:8ffc86ae5e3e6a93765d49d1ab47b6075a9c978a2b3b80f0f32628f39caa0c88"},
+    {file = "jiter-0.8.2-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:5127dc1abd809431172bc3fbe8168d6b90556a30bb10acd5ded41c3cfd6f43b6"},
+    {file = "jiter-0.8.2-cp311-cp311-win32.whl", hash = "sha256:66227a2c7b575720c1871c8800d3a0122bb8ee94edb43a5685aa9aceb2782d44"},
+    {file = "jiter-0.8.2-cp311-cp311-win_amd64.whl", hash = "sha256:cde031d8413842a1e7501e9129b8e676e62a657f8ec8166e18a70d94d4682855"},
+    {file = "jiter-0.8.2-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:e6ec2be506e7d6f9527dae9ff4b7f54e68ea44a0ef6b098256ddf895218a2f8f"},
+    {file = "jiter-0.8.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:76e324da7b5da060287c54f2fabd3db5f76468006c811831f051942bf68c9d44"},
+    {file = "jiter-0.8.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:180a8aea058f7535d1c84183c0362c710f4750bef66630c05f40c93c2b152a0f"},
+    {file = "jiter-0.8.2-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:025337859077b41548bdcbabe38698bcd93cfe10b06ff66617a48ff92c9aec60"},
+    {file = "jiter-0.8.2-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:ecff0dc14f409599bbcafa7e470c00b80f17abc14d1405d38ab02e4b42e55b57"},
+    {file = "jiter-0.8.2-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:ffd9fee7d0775ebaba131f7ca2e2d83839a62ad65e8e02fe2bd8fc975cedeb9e"},
+    {file = "jiter-0.8.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:14601dcac4889e0a1c75ccf6a0e4baf70dbc75041e51bcf8d0e9274519df6887"},
+    {file = "jiter-0.8.2-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:92249669925bc1c54fcd2ec73f70f2c1d6a817928480ee1c65af5f6b81cdf12d"},
+    {file = "jiter-0.8.2-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:e725edd0929fa79f8349ab4ec7f81c714df51dc4e991539a578e5018fa4a7152"},
+    {file = "jiter-0.8.2-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:bf55846c7b7a680eebaf9c3c48d630e1bf51bdf76c68a5f654b8524335b0ad29"},
+    {file = "jiter-0.8.2-cp312-cp312-win32.whl", hash = "sha256:7efe4853ecd3d6110301665a5178b9856be7e2a9485f49d91aa4d737ad2ae49e"},
+    {file = "jiter-0.8.2-cp312-cp312-win_amd64.whl", hash = "sha256:83c0efd80b29695058d0fd2fa8a556490dbce9804eac3e281f373bbc99045f6c"},
+    {file = "jiter-0.8.2-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:ca1f08b8e43dc3bd0594c992fb1fd2f7ce87f7bf0d44358198d6da8034afdf84"},
+    {file = "jiter-0.8.2-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:5672a86d55416ccd214c778efccf3266b84f87b89063b582167d803246354be4"},
+    {file = "jiter-0.8.2-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:58dc9bc9767a1101f4e5e22db1b652161a225874d66f0e5cb8e2c7d1c438b587"},
+    {file = "jiter-0.8.2-cp313-cp313-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:37b2998606d6dadbb5ccda959a33d6a5e853252d921fec1792fc902351bb4e2c"},
+    {file = "jiter-0.8.2-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:4ab9a87f3784eb0e098f84a32670cfe4a79cb6512fd8f42ae3d0709f06405d18"},
+    {file = "jiter-0.8.2-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:79aec8172b9e3c6d05fd4b219d5de1ac616bd8da934107325a6c0d0e866a21b6"},
+    {file = "jiter-0.8.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:711e408732d4e9a0208008e5892c2966b485c783cd2d9a681f3eb147cf36c7ef"},
+    {file = "jiter-0.8.2-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:653cf462db4e8c41995e33d865965e79641ef45369d8a11f54cd30888b7e6ff1"},
+    {file = "jiter-0.8.2-cp313-cp313-musllinux_1_1_aarch64.whl", hash = "sha256:9c63eaef32b7bebac8ebebf4dabebdbc6769a09c127294db6babee38e9f405b9"},
+    {file = "jiter-0.8.2-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:eb21aaa9a200d0a80dacc7a81038d2e476ffe473ffdd9c91eb745d623561de05"},
+    {file = "jiter-0.8.2-cp313-cp313-win32.whl", hash = "sha256:789361ed945d8d42850f919342a8665d2dc79e7e44ca1c97cc786966a21f627a"},
+    {file = "jiter-0.8.2-cp313-cp313-win_amd64.whl", hash = "sha256:ab7f43235d71e03b941c1630f4b6e3055d46b6cb8728a17663eaac9d8e83a865"},
+    {file = "jiter-0.8.2-cp313-cp313t-macosx_11_0_arm64.whl", hash = "sha256:b426f72cd77da3fec300ed3bc990895e2dd6b49e3bfe6c438592a3ba660e41ca"},
+    {file = "jiter-0.8.2-cp313-cp313t-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b2dd880785088ff2ad21ffee205e58a8c1ddabc63612444ae41e5e4b321b39c0"},
+    {file = "jiter-0.8.2-cp313-cp313t-win_amd64.whl", hash = "sha256:3ac9f578c46f22405ff7f8b1f5848fb753cc4b8377fbec8470a7dc3997ca7566"},
+    {file = "jiter-0.8.2-cp38-cp38-macosx_10_12_x86_64.whl", hash = "sha256:9e1fa156ee9454642adb7e7234a383884452532bc9d53d5af2d18d98ada1d79c"},
+    {file = "jiter-0.8.2-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:0cf5dfa9956d96ff2efb0f8e9c7d055904012c952539a774305aaaf3abdf3d6c"},
+    {file = "jiter-0.8.2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e52bf98c7e727dd44f7c4acb980cb988448faeafed8433c867888268899b298b"},
+    {file = "jiter-0.8.2-cp38-cp38-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:a2ecaa3c23e7a7cf86d00eda3390c232f4d533cd9ddea4b04f5d0644faf642c5"},
+    {file = "jiter-0.8.2-cp38-cp38-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:08d4c92bf480e19fc3f2717c9ce2aa31dceaa9163839a311424b6862252c943e"},
+    {file = "jiter-0.8.2-cp38-cp38-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:99d9a1eded738299ba8e106c6779ce5c3893cffa0e32e4485d680588adae6db8"},
+    {file = "jiter-0.8.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d20be8b7f606df096e08b0b1b4a3c6f0515e8dac296881fe7461dfa0fb5ec817"},
+    {file = "jiter-0.8.2-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:d33f94615fcaf872f7fd8cd98ac3b429e435c77619777e8a449d9d27e01134d1"},
+    {file = "jiter-0.8.2-cp38-cp38-musllinux_1_1_aarch64.whl", hash = "sha256:317b25e98a35ffec5c67efe56a4e9970852632c810d35b34ecdd70cc0e47b3b6"},
+    {file = "jiter-0.8.2-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:fc9043259ee430ecd71d178fccabd8c332a3bf1e81e50cae43cc2b28d19e4cb7"},
+    {file = "jiter-0.8.2-cp38-cp38-win32.whl", hash = "sha256:fc5adda618205bd4678b146612ce44c3cbfdee9697951f2c0ffdef1f26d72b63"},
+    {file = "jiter-0.8.2-cp38-cp38-win_amd64.whl", hash = "sha256:cd646c827b4f85ef4a78e4e58f4f5854fae0caf3db91b59f0d73731448a970c6"},
+    {file = "jiter-0.8.2-cp39-cp39-macosx_10_12_x86_64.whl", hash = "sha256:e41e75344acef3fc59ba4765df29f107f309ca9e8eace5baacabd9217e52a5ee"},
+    {file = "jiter-0.8.2-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:7f22b16b35d5c1df9dfd58843ab2cd25e6bf15191f5a236bed177afade507bfc"},
+    {file = "jiter-0.8.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f7200b8f7619d36aa51c803fd52020a2dfbea36ffec1b5e22cab11fd34d95a6d"},
+    {file = "jiter-0.8.2-cp39-cp39-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:70bf4c43652cc294040dbb62256c83c8718370c8b93dd93d934b9a7bf6c4f53c"},
+    {file = "jiter-0.8.2-cp39-cp39-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:f9d471356dc16f84ed48768b8ee79f29514295c7295cb41e1133ec0b2b8d637d"},
+    {file = "jiter-0.8.2-cp39-cp39-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:859e8eb3507894093d01929e12e267f83b1d5f6221099d3ec976f0c995cb6bd9"},
+    {file = "jiter-0.8.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:eaa58399c01db555346647a907b4ef6d4f584b123943be6ed5588c3f2359c9f4"},
+    {file = "jiter-0.8.2-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:8f2d5ed877f089862f4c7aacf3a542627c1496f972a34d0474ce85ee7d939c27"},
+    {file = "jiter-0.8.2-cp39-cp39-musllinux_1_1_aarch64.whl", hash = "sha256:03c9df035d4f8d647f8c210ddc2ae0728387275340668fb30d2421e17d9a0841"},
+    {file = "jiter-0.8.2-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:8bd2a824d08d8977bb2794ea2682f898ad3d8837932e3a74937e93d62ecbb637"},
+    {file = "jiter-0.8.2-cp39-cp39-win32.whl", hash = "sha256:ca29b6371ebc40e496995c94b988a101b9fbbed48a51190a4461fcb0a68b4a36"},
+    {file = "jiter-0.8.2-cp39-cp39-win_amd64.whl", hash = "sha256:1c0dfbd1be3cbefc7510102370d86e35d1d53e5a93d48519688b1bf0f761160a"},
+    {file = "jiter-0.8.2.tar.gz", hash = "sha256:cd73d3e740666d0e639f678adb176fad25c1bcbdae88d8d7b857e1783bb4212d"},
+]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "kiwisolver"
@@ -667,6 +914,11 @@ files = [
     {file = "kiwisolver-1.4.5.tar.gz", hash = "sha256:e57e563a57fb22a142da34f38acc2fc1a5c864bc29ca1517a88abc963e60d6ec"},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "loguru"
 version = "0.7.2"
@@ -684,6 +936,11 @@ win32-setctime = {version = ">=1.0.0", markers = "sys_platform == \"win32\""}
 
 [package.extras]
 dev = ["Sphinx (==7.2.5)", "colorama (==0.4.5)", "colorama (==0.4.6)", "exceptiongroup (==1.1.3)", "freezegun (==1.1.0)", "freezegun (==1.2.2)", "mypy (==v0.910)", "mypy (==v0.971)", "mypy (==v1.4.1)", "mypy (==v1.5.1)", "pre-commit (==3.4.0)", "pytest (==6.1.2)", "pytest (==7.4.0)", "pytest-cov (==2.12.1)", "pytest-cov (==4.1.0)", "pytest-mypy-plugins (==1.9.3)", "pytest-mypy-plugins (==3.0.0)", "sphinx-autobuild (==2021.3.14)", "sphinx-rtd-theme (==1.3.0)", "tox (==3.27.1)", "tox (==4.11.0)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "markdown-it-py"
@@ -708,6 +965,11 @@ plugins = ["mdit-py-plugins"]
 profiling = ["gprof2dot"]
 rtd = ["jupyter_sphinx", "mdit-py-plugins", "myst-parser", "pyyaml", "sphinx", "sphinx-copybutton", "sphinx-design", "sphinx_book_theme"]
 testing = ["coverage", "pytest", "pytest-cov", "pytest-regressions"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "markupsafe"
@@ -778,6 +1040,11 @@ files = [
     {file = "MarkupSafe-2.1.5.tar.gz", hash = "sha256:d283d37a890ba4c1ae73ffadf8046435c76e7bc2247bbb63c00bd1a709c6544b"},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "matplotlib"
 version = "3.9.0"
@@ -830,6 +1097,11 @@ python-dateutil = ">=2.7"
 [package.extras]
 dev = ["meson-python (>=0.13.1)", "numpy (>=1.25)", "pybind11 (>=2.6)", "setuptools (>=64)", "setuptools_scm (>=7)"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "mdurl"
 version = "0.1.2"
@@ -840,6 +1112,11 @@ files = [
     {file = "mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"},
     {file = "mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "meme-generator"
@@ -864,6 +1141,11 @@ rich = ">=13.0.0,<14.0.0"
 toml = ">=0.10.2,<0.11.0"
 typing-extensions = ">=4.0.0,<5.0.0"
 uvicorn = ">=0.20.0,<1.0.0"
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "msgpack"
@@ -929,6 +1211,11 @@ files = [
     {file = "msgpack-1.0.8-cp39-cp39-win_amd64.whl", hash = "sha256:ed59dd52075f8fc91da6053b12e8c89e37aa043f8986efd89e61fae69dc1b011"},
     {file = "msgpack-1.0.8.tar.gz", hash = "sha256:95c02b0e27e706e48d0e5426d1710ca78e0f0628d6e89d5b5a5b91a5f12274f3"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "multidict"
@@ -1029,20 +1316,30 @@ files = [
     {file = "multidict-6.0.5.tar.gz", hash = "sha256:f7e301075edaf50500f0b341543c41194d8df3ae5caf4702f2095f3ca73dd8da"},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "nepattern"
-version = "0.7.4"
+version = "0.7.7"
 description = "a complex pattern, support typing"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "nepattern-0.7.4-py3-none-any.whl", hash = "sha256:ad7287ee2ff46f010b8c758bf9ed8fd8141aa1afce29c5d5a4f94cc85d277e6e"},
-    {file = "nepattern-0.7.4.tar.gz", hash = "sha256:255a042b45e9d2b04f3c2d73b81912c6b856fae1a10a6e4df30b08ed892d2f9c"},
+    {file = "nepattern-0.7.7-py3-none-any.whl", hash = "sha256:2d66f964333f42df7971390da4fb98dfed1e8b769236f305c28a83c0bcda849a"},
+    {file = "nepattern-0.7.7.tar.gz", hash = "sha256:6667f888457e78937998f9412eb70ad16d220464d2d77850dd2b05e9ecfb3207"},
 ]
 
 [package.dependencies]
 tarina = ">=0.5.1"
 typing-extensions = ">=4.5.0"
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "nonebot-adapter-onebot"
@@ -1061,25 +1358,35 @@ nonebot2 = ">=2.2.0,<3.0.0"
 pydantic = ">=1.10.0,<2.5.0 || >2.5.0,<2.5.1 || >2.5.1,<3.0.0"
 typing-extensions = ">=4.0.0,<5.0.0"
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "nonebot-plugin-alconna"
-version = "0.48.0"
+version = "0.54.2"
 description = "Alconna Adapter for Nonebot"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "nonebot_plugin_alconna-0.48.0-py3-none-any.whl", hash = "sha256:02dcdca744934368246d48373393bcd475d7e4c7182a56a777b0bc45586d557a"},
-    {file = "nonebot_plugin_alconna-0.48.0.tar.gz", hash = "sha256:f5a8a3b9da42f3a6ef2b387d9b5194023178c135d03381b1aa60eead9363d6cc"},
+    {file = "nonebot_plugin_alconna-0.54.2-py3-none-any.whl", hash = "sha256:ab9a1a5f0f8c9a30ba57a49bed5d3e9c3f761ea5954cbafb15bcd2aa9c7d5507"},
+    {file = "nonebot_plugin_alconna-0.54.2.tar.gz", hash = "sha256:0216da3bc2e5f8b4c4c44c2701f8f0a536d35ea0db79e708cc2ecd002b57ace6"},
 ]
 
 [package.dependencies]
-arclet-alconna = ">=1.8.16"
-arclet-alconna-tools = ">=0.7.6"
+arclet-alconna = ">=1.8.35,<2.0"
+arclet-alconna-tools = ">=0.7.10"
 importlib-metadata = ">=4.13.0"
-nepattern = ">=0.7.4"
+nepattern = ">=0.7.7,<1.0"
 nonebot-plugin-waiter = ">=0.6.0"
 nonebot2 = ">=2.3.0"
-tarina = ">=0.5.4"
+tarina = ">=0.6.8,<0.7"
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "nonebot-plugin-localstore"
@@ -1096,6 +1403,11 @@ files = [
 nonebot2 = ">=2.2.0,<3.0.0"
 pydantic = ">=1.10.0,<2.5.0 || >2.5.0,<2.5.1 || >2.5.1,<3.0.0"
 typing-extensions = ">=4.0.0"
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "nonebot-plugin-memes"
@@ -1120,12 +1432,17 @@ pil-utils = ">=0.1.8,<0.2.0"
 pypinyin = ">=0.44.0,<1.0.0"
 pyyaml = ">=6.0,<7.0"
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "nonebot-plugin-plus-one"
 version = "0.1.10"
 description = "全新复读姬，支持文本、图片、表情甚至是转发分享卡片复读，任意群聊触发 +1，姬就 +1。轻巧、专注，不使用任何数据库，不使用任何文件存储"
 optional = false
-python-versions = "<4.0,>=3.8"
+python-versions = ">=3.8,<4.0"
 files = [
     {file = "nonebot_plugin_plus_one-0.1.10-py3-none-any.whl", hash = "sha256:4f4c87fa1655561f06b15a2198b0381910515c799f54abb92151b6764d6ca703"},
     {file = "nonebot_plugin_plus_one-0.1.10.tar.gz", hash = "sha256:6e9d33da14d3218bb0c7cfd413367c9b6290987158827c5ce6e1ca47bd777427"},
@@ -1134,6 +1451,11 @@ files = [
 [package.dependencies]
 nonebot_plugin_session = ">=0.3,<0.4"
 nonebot2 = ">=2.2,<3.0"
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "nonebot-plugin-session"
@@ -1149,6 +1471,11 @@ files = [
 [package.dependencies]
 nonebot2 = ">=2.0.0,<3.0.0"
 strenum = ">=0.4.8,<0.5.0"
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "nonebot-plugin-status"
@@ -1170,12 +1497,17 @@ psutil = ">=5.7.2,<6.0.0"
 [package.extras]
 onebot = ["nonebot-adapter-onebot (>=2.0.0-beta.1,<3.0.0)"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "nonebot-plugin-userinfo"
 version = "0.2.4"
 description = "Nonebot2 用户信息获取插件"
 optional = false
-python-versions = "<4.0,>=3.8"
+python-versions = ">=3.8,<4.0"
 files = [
     {file = "nonebot_plugin_userinfo-0.2.4-py3-none-any.whl", hash = "sha256:f08dac58759b859f8bf1d1c17e96cdcee92b10613631a430405364a40181f9e4"},
     {file = "nonebot_plugin_userinfo-0.2.4.tar.gz", hash = "sha256:1d49ff00ce38c856be4388fc2a954656f07cc529ce38ef9593e3a0ea40f26b6a"},
@@ -1187,6 +1519,11 @@ emoji = ">=2.0.0,<3.0.0"
 httpx = ">=0.20.0,<1.0.0"
 nonebot2 = ">=2.0.0,<3.0.0"
 strenum = ">=0.4.8,<0.5.0"
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "nonebot-plugin-waiter"
@@ -1202,22 +1539,29 @@ files = [
 [package.dependencies]
 nonebot2 = ">=2.3.0"
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "nonebot2"
-version = "2.3.1"
+version = "2.4.1"
 description = "An asynchronous python bot framework."
 optional = false
-python-versions = "<4.0,>=3.9"
+python-versions = ">=3.9,<4.0"
 files = [
-    {file = "nonebot2-2.3.1-py3-none-any.whl", hash = "sha256:91ac0abebe6c403c2443b11a49e065b79e6199460bdd61a32148366b35f81c4d"},
-    {file = "nonebot2-2.3.1.tar.gz", hash = "sha256:ac5a1a1759f15310e9183b606ce6bdbe52a90287bf36a69201be548e23d41e6c"},
+    {file = "nonebot2-2.4.1-py3-none-any.whl", hash = "sha256:fec95f075efc89dbe9ce148618b413b02f46ba284200367749b035e794695111"},
+    {file = "nonebot2-2.4.1.tar.gz", hash = "sha256:8fea364318501ed79721403a8ecd76587bc884d58c356260f691a8bbda9b05e6"},
 ]
 
 [package.dependencies]
+anyio = ">=4.4.0,<5.0.0"
+exceptiongroup = ">=1.2.2,<2.0.0"
 fastapi = {version = ">=0.93.0,<1.0.0", optional = true, markers = "extra == \"fastapi\" or extra == \"all\""}
-httpx = {version = ">=0.20.0,<1.0.0", extras = ["http2"], optional = true, markers = "extra == \"httpx\" or extra == \"all\""}
+httpx = {version = ">=0.26.0,<1.0.0", extras = ["http2"], optional = true, markers = "extra == \"httpx\" or extra == \"all\""}
 loguru = ">=0.6.0,<1.0.0"
-pydantic = ">=1.10.0,<2.5.0 || >2.5.0,<2.5.1 || >2.5.1,<3.0.0"
+pydantic = ">=1.10.0,<2.5.0 || >2.5.0,<2.5.1 || >2.5.1,<2.10.0 || >2.10.0,<2.10.1 || >2.10.1,<3.0.0"
 pygtrie = ">=2.4.1,<3.0.0"
 python-dotenv = ">=0.21.0,<2.0.0"
 tomli = {version = ">=2.0.1,<3.0.0", markers = "python_version < \"3.11\""}
@@ -1227,12 +1571,17 @@ websockets = {version = ">=10.0", optional = true, markers = "extra == \"websock
 yarl = ">=1.7.2,<2.0.0"
 
 [package.extras]
-aiohttp = ["aiohttp[speedups] (>=3.9.0b0,<4.0.0)"]
-all = ["Quart (>=0.18.0,<1.0.0)", "aiohttp[speedups] (>=3.9.0b0,<4.0.0)", "fastapi (>=0.93.0,<1.0.0)", "httpx[http2] (>=0.20.0,<1.0.0)", "uvicorn[standard] (>=0.20.0,<1.0.0)", "websockets (>=10.0)"]
+aiohttp = ["aiohttp[speedups] (>=3.11.0,<4.0.0)"]
+all = ["Quart (>=0.18.0,<1.0.0)", "aiohttp[speedups] (>=3.11.0,<4.0.0)", "fastapi (>=0.93.0,<1.0.0)", "httpx[http2] (>=0.26.0,<1.0.0)", "uvicorn[standard] (>=0.20.0,<1.0.0)", "websockets (>=10.0)"]
 fastapi = ["fastapi (>=0.93.0,<1.0.0)", "uvicorn[standard] (>=0.20.0,<1.0.0)"]
-httpx = ["httpx[http2] (>=0.20.0,<1.0.0)"]
+httpx = ["httpx[http2] (>=0.26.0,<1.0.0)"]
 quart = ["Quart (>=0.18.0,<1.0.0)", "uvicorn[standard] (>=0.20.0,<1.0.0)"]
 websockets = ["websockets (>=10.0)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "numpy"
@@ -1279,6 +1628,41 @@ files = [
     {file = "numpy-1.26.4.tar.gz", hash = "sha256:2a02aba9ed12e4ac4eb3ea9421c420301a0c6460d9830d74a9df87efa4912010"},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
+[[package]]
+name = "openai"
+version = "1.59.3"
+description = "The official Python library for the openai API"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "openai-1.59.3-py3-none-any.whl", hash = "sha256:b041887a0d8f3e70d1fc6ffbb2bf7661c3b9a2f3e806c04bf42f572b9ac7bc37"},
+    {file = "openai-1.59.3.tar.gz", hash = "sha256:7f7fff9d8729968588edf1524e73266e8593bb6cab09298340efb755755bb66f"},
+]
+
+[package.dependencies]
+anyio = ">=3.5.0,<5"
+distro = ">=1.7.0,<2"
+httpx = ">=0.23.0,<1"
+jiter = ">=0.4.0,<1"
+pydantic = ">=1.9.0,<3"
+sniffio = "*"
+tqdm = ">4"
+typing-extensions = ">=4.11,<5"
+
+[package.extras]
+datalib = ["numpy (>=1)", "pandas (>=1.2.3)", "pandas-stubs (>=1.1.0.11)"]
+realtime = ["websockets (>=13,<15)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "opencv-python-headless"
 version = "4.10.0.84"
@@ -1303,6 +1687,11 @@ numpy = [
     {version = ">=1.21.2", markers = "platform_system != \"Darwin\" and python_version >= \"3.10\" and python_version < \"3.11\""},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "packaging"
 version = "24.1"
@@ -1313,6 +1702,11 @@ files = [
     {file = "packaging-24.1-py3-none-any.whl", hash = "sha256:5b8f2217dbdbd2f7f384c41c628544e6d52f2d0f53c6d0c3ea61aa5d1d7ff124"},
     {file = "packaging-24.1.tar.gz", hash = "sha256:026ed72c8ed3fcce5bf8950572258698927fd1dbda10a5e981cdf0ac37f4f002"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "pil-utils"
@@ -1332,6 +1726,11 @@ matplotlib = ">=3.0.0,<4.0.0"
 numpy = ">=1.20.0,<2.0.0"
 opencv-python-headless = ">=4.0.0,<5.0.0"
 Pillow = ">=9.2.0,<11.0.0"
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "pillow"
@@ -1412,6 +1811,11 @@ files = [
 docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-inline-tabs", "sphinx-removed-in", "sphinxext-opengraph"]
 tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "packaging", "pyroma", "pytest", "pytest-cov", "pytest-timeout"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "psutil"
 version = "5.9.8"
@@ -1440,6 +1844,11 @@ files = [
 [package.extras]
 test = ["enum34", "ipaddress", "mock", "pywin32", "wmi"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "pydantic"
 version = "2.7.4"
@@ -1458,6 +1867,11 @@ typing-extensions = ">=4.6.1"
 
 [package.extras]
 email = ["email-validator (>=2.0.0)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "pydantic-core"
@@ -1550,6 +1964,11 @@ files = [
 [package.dependencies]
 typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "pygments"
 version = "2.18.0"
@@ -1564,6 +1983,11 @@ files = [
 [package.extras]
 windows-terminal = ["colorama (>=0.4.6)"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "pygtrie"
 version = "2.5.0"
@@ -1574,6 +1998,11 @@ files = [
     {file = "pygtrie-2.5.0-py3-none-any.whl", hash = "sha256:8795cda8105493d5ae159a5bef313ff13156c5d4d72feddefacaad59f8c8ce16"},
     {file = "pygtrie-2.5.0.tar.gz", hash = "sha256:203514ad826eb403dab1d2e2ddd034e0d1534bbe4dbe0213bb0593f66beba4e2"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "pyparsing"
@@ -1589,6 +2018,11 @@ files = [
 [package.extras]
 diagrams = ["jinja2", "railroad-diagrams"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "pypinyin"
 version = "0.51.0"
@@ -1599,6 +2033,11 @@ files = [
     {file = "pypinyin-0.51.0-py2.py3-none-any.whl", hash = "sha256:ae8878f08fee15d0c5c11053a737e68a4158c22c63dc632b4de060af5c95bf84"},
     {file = "pypinyin-0.51.0.tar.gz", hash = "sha256:cede34fc35a79ef6c799f161e2c280e7b6755ee072fb741cae5ce2a60c4ae0c5"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "python-dateutil"
@@ -1614,6 +2053,11 @@ files = [
 [package.dependencies]
 six = ">=1.5"
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "python-dotenv"
 version = "1.0.1"
@@ -1627,6 +2071,11 @@ files = [
 
 [package.extras]
 cli = ["click (>=5.0)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "python-multipart"
@@ -1642,6 +2091,11 @@ files = [
 [package.extras]
 dev = ["atomicwrites (==1.2.1)", "attrs (==19.2.0)", "coverage (==6.5.0)", "hatch", "invoke (==1.7.3)", "more-itertools (==4.3.0)", "pbr (==4.3.0)", "pluggy (==1.0.0)", "py (==1.11.0)", "pytest (==7.2.0)", "pytest-cov (==4.0.0)", "pytest-timeout (==2.1.0)", "pyyaml (==5.1)"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "pytz"
 version = "2024.1"
@@ -1652,6 +2106,11 @@ files = [
     {file = "pytz-2024.1-py2.py3-none-any.whl", hash = "sha256:328171f4e3623139da4983451950b28e95ac706e13f3f2630a879749e7a8b319"},
     {file = "pytz-2024.1.tar.gz", hash = "sha256:2a29735ea9c18baf14b448846bde5a48030ed267578472d8955cd0e7443a9812"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "pyyaml"
@@ -1712,6 +2171,11 @@ files = [
     {file = "PyYAML-6.0.1-cp39-cp39-win_amd64.whl", hash = "sha256:510c9deebc5c0225e8c96813043e62b680ba2f9c50a08d3724c7f28a747d1486"},
     {file = "PyYAML-6.0.1.tar.gz", hash = "sha256:bfdf460b1736c775f2ba9f6a92bca30bc2095067b8a9d77876d1fad6cc3b4a43"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "regex"
@@ -1801,6 +2265,11 @@ files = [
     {file = "regex-2024.5.15.tar.gz", hash = "sha256:d3ee02d9e5f482cc8309134a91eeaacbdd2261ba111b0fef3748eeb4913e6a2c"},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "rich"
 version = "13.7.1"
@@ -1819,6 +2288,11 @@ pygments = ">=2.13.0,<3.0.0"
 [package.extras]
 jupyter = ["ipywidgets (>=7.5.1,<9)"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "six"
 version = "1.16.0"
@@ -1830,6 +2304,11 @@ files = [
     {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "sniffio"
 version = "1.3.1"
@@ -1840,6 +2319,27 @@ files = [
     {file = "sniffio-1.3.1-py3-none-any.whl", hash = "sha256:2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2"},
     {file = "sniffio-1.3.1.tar.gz", hash = "sha256:f4324edc670a0f49750a81b895f35c3adb843cca46f0530f79fc1babb23789dc"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
+[[package]]
+name = "socksio"
+version = "1.0.0"
+description = "Sans-I/O implementation of SOCKS4, SOCKS4A, and SOCKS5."
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "socksio-1.0.0-py3-none-any.whl", hash = "sha256:95dc1f15f9b34e8d7b16f06d74b8ccf48f609af32ab33c608d08761c5dcbb1f3"},
+    {file = "socksio-1.0.0.tar.gz", hash = "sha256:f88beb3da5b5c38b9890469de67d0cb0f9d494b78b106ca1845f96c10b91c4ac"},
+]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "starlette"
@@ -1858,6 +2358,11 @@ anyio = ">=3.4.0,<5"
 [package.extras]
 full = ["httpx (>=0.22.0)", "itsdangerous", "jinja2", "python-multipart (>=0.0.7)", "pyyaml"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "strenum"
 version = "0.4.15"
@@ -1874,60 +2379,95 @@ docs = ["myst-parser[linkify]", "sphinx", "sphinx-rtd-theme"]
 release = ["twine"]
 test = ["pylint", "pytest", "pytest-black", "pytest-cov", "pytest-pylint"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "tarina"
-version = "0.5.4"
+version = "0.6.8"
 description = "A collection of common utils for Arclet"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "tarina-0.5.4-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:49f20a447866ecc831acc82f09dec01f77a0ca1f89b12fa27268bccd29378449"},
-    {file = "tarina-0.5.4-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:5b24b5c07dc02c006d80930028e1c5f46945bf55effbeeaa426d5ac8f46eff88"},
-    {file = "tarina-0.5.4-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:ed8fe5a1df3b32e69f99f5ae6615dc8c2e34459c7e7f828bbeadefb4ecd4fe4f"},
-    {file = "tarina-0.5.4-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:ab6fac674c408bff3161a27473951df8994b54fff406680814079c9c0b82f804"},
-    {file = "tarina-0.5.4-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:dfabcce37425aaf5db604ad916c9b69350174afcdb98192c6dbf1fc0cda2183f"},
-    {file = "tarina-0.5.4-cp310-cp310-musllinux_1_1_i686.whl", hash = "sha256:18900dc94388da4d322c56292cdab6a62da46d27ab5db30ed8809caab57c3502"},
-    {file = "tarina-0.5.4-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:7b3f8b69949c85bb3cf5b27985961ba0c26e4359a42352f7d5870f6d455f4890"},
-    {file = "tarina-0.5.4-cp310-cp310-win32.whl", hash = "sha256:8e4389a6147460b6ea6a795f21a6348190ca2fe0eb95faafb3120bb0d4de7033"},
-    {file = "tarina-0.5.4-cp310-cp310-win_amd64.whl", hash = "sha256:042bdbaac389334ab9c0851a5f1972dc9ed5c0387b4bcdee3ba1b2223aadb39f"},
-    {file = "tarina-0.5.4-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:08964a6daa02d992be4b4bf2ace99c94549350195a749198f2d422221e93cc9f"},
-    {file = "tarina-0.5.4-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:f81635455a307d65440c20645923041c8815c50dfeac046b64b64fd7840b7c30"},
-    {file = "tarina-0.5.4-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:f20ce1ecc06362bbfd7ca30b1dc19c3a049f69b7dc6061df95a0bf93ce627055"},
-    {file = "tarina-0.5.4-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:539d239b35af0052be9cc7eeb3675c84b02a4b98c3d8ec51dbe7db2e9e5da92a"},
-    {file = "tarina-0.5.4-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:810d8e9da2d450cdd93ac9a11af1ff02b6c9a305aa477cbada0d397c5b0b64e3"},
-    {file = "tarina-0.5.4-cp311-cp311-musllinux_1_1_i686.whl", hash = "sha256:15a2ac416e972b0318c53f20c3478d77fb770dfa9ab25ab43aa8975886ecb160"},
-    {file = "tarina-0.5.4-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:af522dc1ad30d7bcbbf9384f4f3aede3bebd7cecfc7127148ae0d12bd69b65d9"},
-    {file = "tarina-0.5.4-cp311-cp311-win32.whl", hash = "sha256:781b1df4250e8f8f0b7902f3b7952135cbf43284e2cf490f57b738160d74b56f"},
-    {file = "tarina-0.5.4-cp311-cp311-win_amd64.whl", hash = "sha256:9d32bab544e7c74e56958b0ebcd430a80194492ca6e98ed2f6217708fabc4027"},
-    {file = "tarina-0.5.4-cp312-cp312-macosx_10_9_universal2.whl", hash = "sha256:95b1504e4241a28fe75fa0995ebfed1dad140381ad72541e5b69428c84d16735"},
-    {file = "tarina-0.5.4-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:9bbaefb3a627fcefc868d455cdc5d42297ba48369651821b04d8c8836307c39f"},
-    {file = "tarina-0.5.4-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:7cfec7c6a725bebb46b4e4a8ed64523c6deeae94dba1d3102b866c0247a32cdb"},
-    {file = "tarina-0.5.4-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:fccfd98ca925ec3597ca88f359f608f7762ad13a14dffcb17742b1e78e071306"},
-    {file = "tarina-0.5.4-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:bef0dfa5007f5138f48cbb9c2ef9564579def00b75caf47ebf53d32db7bf4044"},
-    {file = "tarina-0.5.4-cp312-cp312-musllinux_1_1_i686.whl", hash = "sha256:8e6e2f0580d8dd956f92313ff51760df6893cd16fc009cdc2607130463d08bbb"},
-    {file = "tarina-0.5.4-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:82f09edcf58b2e02622b173822c31c0ad5685f3e36667bd9de751f8c16b5305f"},
-    {file = "tarina-0.5.4-cp312-cp312-win32.whl", hash = "sha256:b56956862d70f0383973d8413ed0fca9623e930acea0d7bf11a67c79714b869f"},
-    {file = "tarina-0.5.4-cp312-cp312-win_amd64.whl", hash = "sha256:3ee6dafc31cceae46634314db0b547052790015abaec433ff39fef5bf5b3f0f6"},
-    {file = "tarina-0.5.4-cp38-cp38-macosx_10_9_universal2.whl", hash = "sha256:2db7a3c9061ff6b8ba4ad3536850ac39ecc15b01bc41d6ee50468c8a8f06519c"},
-    {file = "tarina-0.5.4-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:2a62297950d1448adaa3cc8ffb9ef1d076e1f51da07862f0205d660914cbee15"},
-    {file = "tarina-0.5.4-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:3b52205781e8b7dfc94ac90f6433a55e8025872b8ceb3bc0498ae2ba3e8b8cfb"},
-    {file = "tarina-0.5.4-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:17d95f0eb66785ef845b0f9567c738e2323f3e6ed56cf82b7c28ab9314dd7896"},
-    {file = "tarina-0.5.4-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:eff02d7ae7718e48290dea13287c554928c09ea7859e3e0cf5bff91d031ad5b2"},
-    {file = "tarina-0.5.4-cp38-cp38-musllinux_1_1_i686.whl", hash = "sha256:13bc48018b78f2fa2707ae5dda3c38e482fdb38e911c38ac1c7208593b58c8a2"},
-    {file = "tarina-0.5.4-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:b0dbf855e6f31397422cccd3816c2ffdc613fa746c0ff064730676eb8c59eb5a"},
-    {file = "tarina-0.5.4-cp38-cp38-win32.whl", hash = "sha256:99767cdc271e35edb401c772c87e2dba9b24f93803a51d0979ef0c113aafb0e0"},
-    {file = "tarina-0.5.4-cp38-cp38-win_amd64.whl", hash = "sha256:64abd0da7146430c9dbce9a659861f09f03a0eecb4c65f42a6ac1c347961c534"},
-    {file = "tarina-0.5.4-cp39-cp39-macosx_10_9_universal2.whl", hash = "sha256:aa01c6032226f996286d60bd7b3bfb95565e9288e89b64208649b584386cfd9e"},
-    {file = "tarina-0.5.4-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:4c93781dfcf0c95c7e12c29fa788a32898aa090ba26bef9b1c970412b8cb7f59"},
-    {file = "tarina-0.5.4-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:b61ab72169c2289001a047694dbf6e0e73ed0b1c5405f65651b2500190928d43"},
-    {file = "tarina-0.5.4-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:e3b9ee386d0a8558c9270ae2f4fd33ff2394482705a2849646aad3df870cf754"},
-    {file = "tarina-0.5.4-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:17d6937a4911e5b7bf1f5a4bcc466e2cce3b1576eb6462459e568668f63a073f"},
-    {file = "tarina-0.5.4-cp39-cp39-musllinux_1_1_i686.whl", hash = "sha256:d4d332b30374b2d8fec2852d6af77f121c0fb026c48593cebdfbed6d49c2b260"},
-    {file = "tarina-0.5.4-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:077b99101ee19699c8791f2630ed7c40c592e5d75ab309a042f5303d89f382c6"},
-    {file = "tarina-0.5.4-cp39-cp39-win32.whl", hash = "sha256:a553a8790215ecd6f1af2616769012f16e28eaae0b805ddc780fe543ec2a6a4b"},
-    {file = "tarina-0.5.4-cp39-cp39-win_amd64.whl", hash = "sha256:5c75b66d011cb7dd78149bf3911a78eaa96885dab4477fd4a96613349411f378"},
-    {file = "tarina-0.5.4-py3-none-any.whl", hash = "sha256:1aa7d5c00e4bb6a35c5fd21bcbc536670df755922cd49bd9076a024fea191ade"},
-    {file = "tarina-0.5.4.tar.gz", hash = "sha256:5d192a50d47b22ae8ca79e50ee760f171e563135eb04dc834a9b254211dbf32e"},
+    {file = "tarina-0.6.8-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:a2f7b7e61912a020d6ba3c591c4edbc31bb468544640bd814470c69a07dcc4cd"},
+    {file = "tarina-0.6.8-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:1cac7cbd49317b8e63eba7d0ce0ba11e1218ab51c9d6ee9df8404b5e226db15b"},
+    {file = "tarina-0.6.8-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:69d9923d888948ccc9d20a191ab1f6ff2bc097f4154b6a3780c45dc78ae047cd"},
+    {file = "tarina-0.6.8-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:6b0f12395301584e0d56c7edd6118c5b5732b456067735ee7f0800575d5d490f"},
+    {file = "tarina-0.6.8-cp310-cp310-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:84bd95b18c7f6a55606b0071654137b98f70faf5d12343d361377cf0d81ecde6"},
+    {file = "tarina-0.6.8-cp310-cp310-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:94e6ee4df273e1fd3eaf36de7c78a93dde08bf2ad67526122afab1b077e344d9"},
+    {file = "tarina-0.6.8-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7afc1a8a11983f39cce18ad7f8d27601c4d34b1ffe1a1aca2a59b4111d181d01"},
+    {file = "tarina-0.6.8-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:e0f74dc96979b774d7e23b964886137f7cf5f58cb2d652c23c3e2d42c1ad39a9"},
+    {file = "tarina-0.6.8-cp310-cp310-musllinux_1_2_aarch64.whl", hash = "sha256:3493d59ef19d1ded232e7a33e52c7d6ebfff66f30ac4c3649ae765b14dacc393"},
+    {file = "tarina-0.6.8-cp310-cp310-musllinux_1_2_i686.whl", hash = "sha256:323351247817dac174f609104c54fcdc4923aaf3ac5e4a4a81c3efaa007d5778"},
+    {file = "tarina-0.6.8-cp310-cp310-musllinux_1_2_ppc64le.whl", hash = "sha256:eb7407046d8051b062f71440b90a11be3ef1a64e99b1c6be157312fe2889e4f4"},
+    {file = "tarina-0.6.8-cp310-cp310-musllinux_1_2_s390x.whl", hash = "sha256:50bbbb249d0849855cf43f4fa09c4eecac53e76a54c876ef1a7fb967f17d35b6"},
+    {file = "tarina-0.6.8-cp310-cp310-musllinux_1_2_x86_64.whl", hash = "sha256:8a05063e41f01f64c3c6e87b740c1e2cebffdcae20b9d89014a934bb2707a2b7"},
+    {file = "tarina-0.6.8-cp310-cp310-win32.whl", hash = "sha256:162756b5c0872856c11cc97ed1a618a9118fef3fb6999edc917578b56f3eb67f"},
+    {file = "tarina-0.6.8-cp310-cp310-win_amd64.whl", hash = "sha256:a58a8a6e36e43de8f3a0561cb264abe300ec6bb4a4215f16c316f1db564de6fb"},
+    {file = "tarina-0.6.8-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:c05d38546712014aafcf123e89d90ad75f08ebd40c5a7e4c76db40d2ae11b387"},
+    {file = "tarina-0.6.8-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:b036d53d2f8ec46fff9f649b5ec70431cdee3a2b99c8706f67d8d55ea4d4e493"},
+    {file = "tarina-0.6.8-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:195d2b4a8a8ec2e946ecd8abab70cf3065fbba67e18e971e0412a74a8417a656"},
+    {file = "tarina-0.6.8-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f9bbe85a83904eb29143a43511c04a3fea9a7392c70a6216fcec3ba06cf1b83a"},
+    {file = "tarina-0.6.8-cp311-cp311-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:4d6b5893b735d24d2a57f6dbb26de92bb5e09e476077a16408e2054f06263530"},
+    {file = "tarina-0.6.8-cp311-cp311-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:a74cc68f4678d37d517a2d661184712f15da608510de6b1bb9103d85d6014409"},
+    {file = "tarina-0.6.8-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6dd0f0d769e503fb81d07bd2d342585347f5149803bd7b4b233deaff1833451f"},
+    {file = "tarina-0.6.8-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:d3b7c91a488aa616e141c337cddce1ba1e0bdac6b98362bc15ce76bd3cd71e17"},
+    {file = "tarina-0.6.8-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:4f0b91da85a816e34a3eb4670d21c26a3909872b1f5525797bedc32a45efd98d"},
+    {file = "tarina-0.6.8-cp311-cp311-musllinux_1_2_i686.whl", hash = "sha256:bf3a5a8fe912d5984627f64cdd187c8a0801c6f3b2f7f12c68cdb5babf691155"},
+    {file = "tarina-0.6.8-cp311-cp311-musllinux_1_2_ppc64le.whl", hash = "sha256:622e226553453a9a873fca5a2d495d2d28003a23834503147954d651186146c4"},
+    {file = "tarina-0.6.8-cp311-cp311-musllinux_1_2_s390x.whl", hash = "sha256:198102e526d096f37bfb868f815cb3bfc864e136aa8b70e90a107a38ffb82c15"},
+    {file = "tarina-0.6.8-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:07b252f686410fbf1fe64b3b6705dd40ff218bc1d6a67efac640a0a246f66da3"},
+    {file = "tarina-0.6.8-cp311-cp311-win32.whl", hash = "sha256:9e4f56478c58706548e0f08bd277666bac783d918257950be49c4a5d8a35e7b0"},
+    {file = "tarina-0.6.8-cp311-cp311-win_amd64.whl", hash = "sha256:d0a92b5368a8a1700f0482d0bc3891dccdfc6dc61f7e66101f68544fca10f096"},
+    {file = "tarina-0.6.8-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:e8e4bf8ed36c92af7b2a973905f5f4f58dabf7490c5dda695534bf5e3b20d92e"},
+    {file = "tarina-0.6.8-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:175754132a107c2830a341d3efcae60f44bfd8e0eab56d92537cc6f849ad44e3"},
+    {file = "tarina-0.6.8-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:c5f983f0c84959589f884777c7ac0b22786d6d183ae367e53265f09e9ed7dc9f"},
+    {file = "tarina-0.6.8-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:2c8cc5f1bf3c2099377b5de76b0e192bb4fae3dcfcc245be9ed14315b29c8c75"},
+    {file = "tarina-0.6.8-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:e7067131af4081d8ca3d4e70c96e8903c9e483e4d5af4910b93051602f7e8b34"},
+    {file = "tarina-0.6.8-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:a66ea0778dcbd9e9b9b226529ed1822261722956468de026655e09b41feee42b"},
+    {file = "tarina-0.6.8-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:dd8501b0cd51ad8c0e294b46614ef27ef6773324099b5a24711534db55ded44d"},
+    {file = "tarina-0.6.8-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:5812e903c79c02029bfe61fd0ff30bf2a5ac58e7c5b1ab3abfb0f0b57260c5b8"},
+    {file = "tarina-0.6.8-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:60ea05cb8e07a629096d9abbd11258df2bcea03168bc8ef8f369ca0dddfc504a"},
+    {file = "tarina-0.6.8-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:b2635d27c34353e9431cb995acece3a0b607cde0934ebf8df35f0e4ae70a0335"},
+    {file = "tarina-0.6.8-cp312-cp312-musllinux_1_2_ppc64le.whl", hash = "sha256:542b5359d23f969f275f9e80960ce7f19a2684e93cd3ab659afaeb7ee06de038"},
+    {file = "tarina-0.6.8-cp312-cp312-musllinux_1_2_s390x.whl", hash = "sha256:4ba2018a855f59c28f087ec1ec1d892c6afccdd0da8f4347fbf8e3219145d66c"},
+    {file = "tarina-0.6.8-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:fdf9c5c44d402041df79e747ff9f82c6794875febb053376acdb724043770975"},
+    {file = "tarina-0.6.8-cp312-cp312-win32.whl", hash = "sha256:cf44ca009d79d0ecc8541b9067a3b7d086d1939de3bc1b04c164286b0fcf2112"},
+    {file = "tarina-0.6.8-cp312-cp312-win_amd64.whl", hash = "sha256:8cd9ff00e2eb9ed6c42b80504005c9b6de4a9afe9ef36771f63b8f9492e38a90"},
+    {file = "tarina-0.6.8-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:af3ff4742b0324d590298812997d028a6d6892bfab5680cd266bed0c1bbf90b0"},
+    {file = "tarina-0.6.8-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:e7919d53f20e7d780b44e1804f7c9006bcf5832f87cfeb8d5432f1c832953ed4"},
+    {file = "tarina-0.6.8-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:878f8d9411ed36cf4408751e209a09c5e2363fc06b6074e966995cdbdc365a9d"},
+    {file = "tarina-0.6.8-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:afa166fe58b65be6aed113fca54851b236cfd5c23e33f5e61c403f7b71eda17a"},
+    {file = "tarina-0.6.8-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:04ea6b8f4568fe5b4f167d002fbe05879bfa04a4121b4ca3d294580cfc86b85d"},
+    {file = "tarina-0.6.8-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:cbdf37600789f34c1eba6bf05e246f8e9a5b46cf93f9652e92d355e767bbc430"},
+    {file = "tarina-0.6.8-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:eb748ad914898c293771ccdb32c73b3117a15a3234c9d5eb001f834533cf67ef"},
+    {file = "tarina-0.6.8-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:55ca473eb8f3bbd70af71a29d59c6c0951e19ae24f3be86259b884fc097028a0"},
+    {file = "tarina-0.6.8-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:4b124eee1ce8e25f1c1aba0464c95226ce5ed1b35f079f0fce0f993f38d3393b"},
+    {file = "tarina-0.6.8-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:4295448f4dd9f54703adde2683cf6a515f0944687868da4ec500d595e6a9122d"},
+    {file = "tarina-0.6.8-cp313-cp313-musllinux_1_2_ppc64le.whl", hash = "sha256:77392b3e53e9e1069b9131b1eb2037c53b360e4d7f3cfa8ae04277fe4e785eb1"},
+    {file = "tarina-0.6.8-cp313-cp313-musllinux_1_2_s390x.whl", hash = "sha256:da9771f40ddcd9da087a4fc2d472b548c0da2bb61ad642b7e186ea7098120be6"},
+    {file = "tarina-0.6.8-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:fac01686a3f9d4461b8ce6ba3afadb5b24138e27f725ee11efc4b057d98d4e4a"},
+    {file = "tarina-0.6.8-cp313-cp313-win32.whl", hash = "sha256:a977e3e38535455b38e018ec345f9982c4d2b40945b330aa5c70c1a24a2f8f5b"},
+    {file = "tarina-0.6.8-cp313-cp313-win_amd64.whl", hash = "sha256:62445e9a7c0ab7ac8f9c316836ade382f4b9780492f0a8a35a658f827bcb1d7f"},
+    {file = "tarina-0.6.8-cp39-cp39-macosx_10_9_universal2.whl", hash = "sha256:491b46bfd030f64edc8daac99051e9e1a82d4592aaa9d91c86d18da7f1816a8d"},
+    {file = "tarina-0.6.8-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:8dab1c7ff584f427ae671ecd0379b5795f3ddfee867c5c8997fb110c35b72901"},
+    {file = "tarina-0.6.8-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:9f998c32df568da30f236876118f5c359caf00d4935249c78c2e6e15caa1a72f"},
+    {file = "tarina-0.6.8-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b427b03be5e9d19882558dafd8cae6decc4406f1511741409f1b75a5ce0bf447"},
+    {file = "tarina-0.6.8-cp39-cp39-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:ec0bb5da7bbea3df20750acab45403c5fbd5a0b5c4dd7267e6d0cb3669935db4"},
+    {file = "tarina-0.6.8-cp39-cp39-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:7acbc4b547fd623beb174431e2d01b2bc2a5d7451fe3d0e9ae3e0118d862d375"},
+    {file = "tarina-0.6.8-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ed03a67986b00411aa5d3cd02896e5daf0e5af44247fd0ef79484b06780a2462"},
+    {file = "tarina-0.6.8-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:637740055c0e7da77793e0f2d56189f4620e9db31578c590234f85240364e80d"},
+    {file = "tarina-0.6.8-cp39-cp39-musllinux_1_2_aarch64.whl", hash = "sha256:9df3d4441b36b7e6ac290b05dd9a1e6193ff0acc2d970be2b855283b76d0ad40"},
+    {file = "tarina-0.6.8-cp39-cp39-musllinux_1_2_i686.whl", hash = "sha256:ff583c3579e5ea939da67c6a32ebced76b270c884d9f686a003f66f32a0cecdc"},
+    {file = "tarina-0.6.8-cp39-cp39-musllinux_1_2_ppc64le.whl", hash = "sha256:91589c96904f6a07ccf7fec977c403bab52aad63bd3a801a32e11d2ee85e1d46"},
+    {file = "tarina-0.6.8-cp39-cp39-musllinux_1_2_s390x.whl", hash = "sha256:4a7448cacff18d536c3cf4453282ee29cf401442cba1a50f02981e5d4c374d7f"},
+    {file = "tarina-0.6.8-cp39-cp39-musllinux_1_2_x86_64.whl", hash = "sha256:96fe4a3a33fa20cc3bd996ef9e4a909b00c37d89bd24d594a6024ca59a26c6c4"},
+    {file = "tarina-0.6.8-cp39-cp39-win32.whl", hash = "sha256:cbff457659568f46fbbb8e594644278b51efddb532890117b4965b8c059d4d4a"},
+    {file = "tarina-0.6.8-cp39-cp39-win_amd64.whl", hash = "sha256:bace5eeaed47048e9a8e9dd7953aadc11aace8c8a5db8457906d8f9c52604fc5"},
+    {file = "tarina-0.6.8-py3-none-any.whl", hash = "sha256:0e8a04eecb741937244d97da54f8cd36995819fc12a6b60c9b3f3f3d2860ebe6"},
+    {file = "tarina-0.6.8.tar.gz", hash = "sha256:d77d68948967a130066b61e85b21189259030f80ad19295bd81ff6b52f348316"},
 ]
 
 [package.dependencies]
@@ -1935,6 +2475,11 @@ typing-extensions = ">=4.4.0"
 
 [package.extras]
 yaml = ["pyyaml (>=6.0.1)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "toml"
@@ -1947,6 +2492,11 @@ files = [
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "tomli"
 version = "2.0.1"
@@ -1957,6 +2507,37 @@ files = [
     {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
     {file = "tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
+[[package]]
+name = "tqdm"
+version = "4.67.1"
+description = "Fast, Extensible Progress Meter"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "tqdm-4.67.1-py3-none-any.whl", hash = "sha256:26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2"},
+    {file = "tqdm-4.67.1.tar.gz", hash = "sha256:f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2"},
+]
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[package.extras]
+dev = ["nbval", "pytest (>=6)", "pytest-asyncio (>=0.24)", "pytest-cov", "pytest-timeout"]
+discord = ["requests"]
+notebook = ["ipywidgets (>=6)"]
+slack = ["slack-sdk"]
+telegram = ["requests"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "typing-extensions"
@@ -1969,6 +2550,11 @@ files = [
     {file = "typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "tzdata"
 version = "2024.1"
@@ -1979,6 +2565,11 @@ files = [
     {file = "tzdata-2024.1-py2.py3-none-any.whl", hash = "sha256:9068bc196136463f5245e51efda838afa15aaeca9903f49050dfa2679db4d252"},
     {file = "tzdata-2024.1.tar.gz", hash = "sha256:2674120f8d891909751c38abcdfd386ac0a5a1127954fbc332af6b5ceae07efd"},
 ]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "tzlocal"
@@ -1996,6 +2587,11 @@ tzdata = {version = "*", markers = "platform_system == \"Windows\""}
 
 [package.extras]
 devenv = ["check-manifest", "pytest (>=4.3)", "pytest-cov", "pytest-mock (>=3.3)", "zest.releaser"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "uvicorn"
@@ -2021,6 +2617,11 @@ websockets = {version = ">=10.4", optional = true, markers = "extra == \"standar
 
 [package.extras]
 standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)", "pyyaml (>=5.1)", "uvloop (>=0.14.0,!=0.15.0,!=0.15.1)", "watchfiles (>=0.13)", "websockets (>=10.4)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "uvloop"
@@ -2065,6 +2666,11 @@ files = [
 [package.extras]
 docs = ["Sphinx (>=4.1.2,<4.2.0)", "sphinx-rtd-theme (>=0.5.2,<0.6.0)", "sphinxcontrib-asyncio (>=0.3.0,<0.4.0)"]
 test = ["Cython (>=0.29.36,<0.30.0)", "aiohttp (==3.9.0b0)", "aiohttp (>=3.8.1)", "flake8 (>=5.0,<6.0)", "mypy (>=0.800)", "psutil", "pyOpenSSL (>=23.0.0,<23.1.0)", "pycodestyle (>=2.9.0,<2.10.0)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "watchfiles"
@@ -2153,6 +2759,11 @@ files = [
 [package.dependencies]
 anyio = ">=3.0.0"
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "websockets"
 version = "10.4"
@@ -2231,6 +2842,11 @@ files = [
     {file = "websockets-10.4.tar.gz", hash = "sha256:eef610b23933c54d5d921c92578ae5f89813438fded840c2e9809d378dc765d3"},
 ]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "win32-setctime"
 version = "1.1.0"
@@ -2244,6 +2860,11 @@ files = [
 
 [package.extras]
 dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
 
 [[package]]
 name = "yarl"
@@ -2348,6 +2969,11 @@ files = [
 idna = ">=2.0"
 multidict = ">=4.0"
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [[package]]
 name = "zipp"
 version = "3.19.2"
@@ -2363,7 +2989,12 @@ files = [
 doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-lint"]
 test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", "jaraco.test", "more-itertools", "pytest (>=6,!=8.1.*)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ignore-flaky", "pytest-mypy", "pytest-ruff (>=0.2.1)"]
 
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "mirrors"
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "d0f95beb2ce02a30b8246ed6177fe2af33aef86aae056c2cfcd25da39fbad5bc"
+content-hash = "dbfbcefef93097d8287825bf0c0637f7c20040d48b45a9fc975d630794e65c43"
