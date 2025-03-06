@@ -17,6 +17,8 @@ nonebot-plugin-memes = "^0.6.2"
 httpx = {extras = ["socks"], version = "^0.28.1"}
 openai = "^1.59.3"
 nonebot-plugin-alconna = "^0.54.2"
+pyyaml = "^6.0.2"
+asyncpg = "^0.30.0"
 
 
 [[tool.poetry.source]]
@@ -27,3 +29,4 @@ priority = "primary"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+

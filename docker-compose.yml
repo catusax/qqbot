@@ -1,0 +1,27 @@
+services:
+
+  timescale:
+    image: pgvector/pgvector:pg17
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_USER=postgres
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - pgpoddata:/var/lib/postgresql/data
+    configs:
+      - source: db.sql
+        target: /docker-entrypoint-initdb.d/db.sql
+    restart: unless-stopped
+    ports:
+      - ${DB_PORT}:5432
+
+volumes:
+  pgpoddata:
+
+configs:
+  db.sql:
+    content: |
+      CREATE DATABASE ${POSTGRES_DBNAME} WITH OWNER postgres;
+      USE ${POSTGRES_DBNAME};
+      CREATE EXTENSION IF NOT EXISTS timescaledb;
+      CREATE EXTENSION IF NOT EXISTS fuzzystrmatch;
